@@ -8,10 +8,15 @@ class UserInDB(BaseModel):
     email: str
     hashed_password: str
 
-class CandidateInDB(BaseModel):
+class FieldInDB(BaseModel):
     id: Optional[str] = Field(default_factory=str)
     user_id: str
-    data: Any
+    bbox: str
+    field_name: str
+
+class FieldCreate(BaseModel):
+    bbox: str
+    field_name: str
 
 class UserCreate(BaseModel):
     company_name: str
