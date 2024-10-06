@@ -16,6 +16,12 @@ from pinecone import Pinecone
 import re
 import requests
 import base64
+import datetime
+import sklearn
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+import pandas as pd
+
 
 # Load environment variables
 load_dotenv()
@@ -305,3 +311,8 @@ def extract_price(price_str):
     if match:
         return int(match.group(1)) 
     return 0
+
+
+
+
+
